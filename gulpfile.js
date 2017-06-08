@@ -4,7 +4,6 @@ var bower = require('bower');
 var concat = require('gulp-concat');
 var sh = require('shelljs');
 var postcss = require('gulp-postcss');
-var autoprefixer = require('gulp-autoprefixer');
 var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
 
@@ -28,7 +27,7 @@ gulp.task('js:watch', function() {
 gulp.task('css', function () {
     var plugins = [
         autoprefixer({browsers: ['ie > 8',
-        'Firefox > 4']}),
+        'Firefox > 4', 'Chrome > 20', 'Safari > 20']}),
         cssnano()
     ];
     return gulp.src(paths.css)
