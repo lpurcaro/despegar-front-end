@@ -1,7 +1,7 @@
 <div class="col-sm-7 padding-right-5" ng-controller="formCtrl">
-  <div class="bg-yellow ov-auto rounded-10 padding-30">
+  <div class="bg-yellow ov-auto rounded-10 padding-30" ng-cloak>
     <h2 class="color-blue margin-0 font-20">Buscar hoteles en {{destino.ciudad}}</h2>
-    <form class="margin-top-20" ng-submit="buscar(data)">
+    <form name="buscarHotel" class="margin-top-20" ng-submit="buscar(data)">
       <div class="form-group">
         <label for="ciudad" class="center-label">Ciudad</label>
         <div class="form-search">
@@ -62,6 +62,7 @@
           </div>
         </div>
       </fieldset>
+      <p class="color-green relative font-large d-inline" style="top:30px">{{request}}</p>
       <div class="f-right">
         <span class="sp-best-price-es price absolute" style="bottom:85px; right:62px;"></span>
         <input type="submit" value="Buscar" class="gradient-blue font-17 color-white padding-10-30 rounded-5 button-shadow"/>

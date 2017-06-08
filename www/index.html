@@ -15,13 +15,13 @@
 <body ng-app="despegar">
     <div class="container rounded-10 bg-white margin-bottom-10" ng-controller="mainCtrl">
       <nav id="bread-crumb" class="bread-crumb margin-top-10 color-d-grey">
-        <ul>
+        <ul ng-cloak>
           <li ng-repeat="link in breadcrumb track by $index">
             <a href="" ng-class="{'color-d-grey': $index == breadcrumb.length - 1}">{{link}}</a><span ng-if="$index != breadcrumb.length - 1" class="glyphicon glyphicon-menu-right"></span>
           </li>
         </ul>
       </nav>
-      <div class="bg-grey rounded-5 padding-5">
+      <div class="bg-grey rounded-5 padding-5" ng-cloak>
         <div class="row">
         <header class="col-xs-8">
           <div class="padding-10">
@@ -47,7 +47,7 @@
       <section class="row margin-top-20">
         <div ng-include="template.form"></div>
         <div class="hidden-xs col-sm-5 padding-left-5" style="height: 360px;">
-          <div class="sp-rio-de-janeiro rounded-10 full-height t-center">
+          <div class="sp-rio-de-janeiro rounded-10 full-height t-center" ng-cloak>
             <div class="bg-black opacity-50"></div>
             <p class="font-25 color-white">{{cantidad}} Hoteles en {{destino.ciudad}}, {{destino.pais}}<br/><span class="font-15">A partir de</span> <span class="font-20">U$S </span>577</p>
           </div>
@@ -57,7 +57,7 @@
         <div class="col-sm-8" ng-controller="primaryDataCtrl">
           <div ng-include="template.hotels"></div>
           <b class="weight-inherit color-d-grey">¿Administra un hotel en Río de Janeiro, Brasil? <a href="" class="underlined">¡Inclúyalo en este listado!</a></b>
-          <nav class="t-center margin-top-40">
+          <nav class="t-center margin-top-40" ng-cloak>
             <ul uib-pagination boundary-links="true" total-items="279" ng-model="currentPage" class="pagination-sm " previous-text="Anterior" next-text="Siguiente" first-text="&laquo;" last-text="&raquo;" max-size="5" boundary-link-numbers="true"></ul>
           </nav>
          </div>
@@ -66,7 +66,7 @@
           <section>
             <div ng-include="template.comments"></div>
             <div class="bg-grey rounded-5 padding-20 margin-bottom-30">
-              <div ng-repeat="star in getStars(6) | reverse | limitTo: 5" class="padding-5 color-blue-light">
+              <div ng-repeat="star in getStars(6) | reverse | limitTo: 5" class="padding-5 color-blue-light" ng-cloak>
                 <span class="font-17">Hoteles {{star}} estrella<span ng-if="star !== 1">s</span></span>
                 <div class="f-right hidden-xs hidden-sm">
                   <span ng-repeat="s in getStars(star)" class="sp-star stars-sm"></span>

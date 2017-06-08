@@ -1,14 +1,13 @@
 angular.module('despegar')
   .controller('destinosCtrl', ['$scope', 'destinosService', function ($scope, destinosService) {
-    $scope.availability = [];
-
+    /**
+    * Vinculo los destinos de mi respuesta con la variable que utilizo en el modelo.
+    *
+    * @param {JSON} response - Respuesta exitosa del servicio.
+    *
+    * @returns {undefined}
+    */
     destinosService.getDestinos().then(function (response) {
       $scope.destinos = response.data.destinos;
-
-      for (var i = 0; i < $scope.destinos.lenght; i++) {
-        $scope.availability[i] = false;
-      }
-    }, function (error) {
-      console.log(error);
     });
   }]);

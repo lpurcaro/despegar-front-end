@@ -1,5 +1,5 @@
 <div ng-controller="destinosCtrl">
-  <div ng-repeat="destino in destinos" class="bg-grey padding-5 margin-bottom-10">
+  <div ng-repeat="destino in destinos" class="bg-grey padding-5 margin-bottom-10" ng-cloak>
     <h2 class="font-20 color-blue margin-5">{{destino.title}}</h2>
     <ul>
       <li ng-repeat="hotel in destino.hoteles track by $index" class="d-inline w-list color-blue-light font-15 b-top margin-bottom-0">{{hotel}}</li>

@@ -27,7 +27,7 @@ gulp.task('js:watch', function() {
 gulp.task('css', function () {
     var plugins = [
         autoprefixer({browsers: ['ie > 8',
-        'Firefox > 4', 'Chrome > 20', 'Safari > 20']}),
+        'Firefox > 4', 'Chrome > 1', 'Safari > 1']}),
         cssnano()
     ];
     return gulp.src(paths.css)

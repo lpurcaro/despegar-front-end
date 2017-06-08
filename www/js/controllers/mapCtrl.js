@@ -3,6 +3,11 @@ angular.module('despegar')
     $scope.map = false;
     $scope.action = 'Ampliar mapa';
 
+    /**
+    * Activo y Desactivo el mapa en función a su estado actual
+    *
+    * @returns {undefined}
+    */
     $scope.actionMap = function () {
       if ($scope.map) {
         $scope.map = false;

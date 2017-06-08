@@ -6,6 +6,13 @@ angular.module('despegar')
       pais : 'Brasil'
     };
 
+    /**
+    * Genero un Array a partir del numero de estrellas que tiene el Hotel
+    *
+    * @param {string} stars - Cantidad de estrellas
+    *
+    * @returns {Array}
+    */
     $scope.getStars = function (stars) {
       var count = [];
       for (var i = 0; i < stars; i++) {
