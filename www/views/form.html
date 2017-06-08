@@ -1,0 +1,71 @@
+<div class="col-sm-7 padding-right-5" ng-controller="formCtrl">
+  <div class="bg-yellow ov-auto rounded-10 padding-30">
+    <h2 class="color-blue margin-0 font-20">Buscar hoteles en {{destino.ciudad}}</h2>
+    <form class="margin-top-20" ng-submit="buscar(data)">
+      <div class="form-group">
+        <label for="ciudad" class="center-label">Ciudad</label>
+        <div class="form-search">
+          <input type="text" id="ciudad" ng-model="data.ciudad" ng-init="data.ciudad = destino.ciudad + ', ' + destino.pais" class="width-85 padding-5-3 b-d-grey">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="salida" class="center-label">Entrada</label>
+          <div class="form-search">
+            <a class="dropdown-toggle absolute" id="entrada" role="button" data-toggle="dropdown" data-target="data.entrada" href="">
+              <input placeholder="dd/mm/yyyy" type="text" ng-value="data.entrada | date: 'dd/MM/yyyy'" class="full-width padding-5-3 b-d-grey color-black"/>
+              <span class="sp-calendar calendar"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <datetimepicker data-ng-model="data.entrada" data-before-render="actual($dates)" data-datetimepicker-config="config.entrada"/>
+            </ul>
+          </div>
+        </div>
+      <div class="form-group">
+        <label for="salida" class="center-label">Salida</label>
+          <div class="form-search">
+            <a class="dropdown-toggle absolute" id="salida" role="button" data-toggle="dropdown" data-target="data.salida" href="">
+              <input placeholder="dd/mm/yyyy" type="text" ng-value="data.salida | date: 'dd/MM/yyyy'" class="full-width padding-5-3 b-d-grey color-black"/>
+              <span class="sp-calendar calendar"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <datetimepicker data-ng-model="data.salida" data-before-render="actual($dates)" data-datetimepicker-config="config.salida"/>
+            </ul>
+          </div>
+      </div>
+      <div class="form-group margin-bottom-0">
+        <label for="cantidad" class="center-label">Cantidad</label>
+        <div class="form-search" ng-init="data.cantidad = 0">
+          <select id="cantidad" class="absolute padding-5-3 b-d-grey" ng-model="data.cantidad">
+            <option ng-if="$index == 0" ng-value="$index" ng-repeat="count in habitaciones track by $index">{{$index + 1}} Habitación</option>
+            <option ng-if="$index > 0" ng-value="$index" ng-repeat="count in habitaciones track by $index">{{$index + 1}} Habitaciones</option>
+          </select>
+        </div>
+      </div>
+      <fieldset class="form-group margin-bottom-0 ov-auto">
+        <legend class="relative font-10 b-0 margin-0" style="top:48px;">Huéspedes</legend>
+        <div class="width-40 padding-left-15-p">
+          <div class="row">
+              <div class="col-xs-6 padding-left-0">
+                <label for="adultos" class="d-block">Adultos</label>
+                <select id="adultos" class="width-70-p padding-5-7 b-d-grey" ng-model="data.adultos" ng-init="data.adultos = 1">
+                  <option ng-value="$index" ng-repeat="count in adultos track by $index">{{$index + 1}}</option>
+                </select>
+                <span class="gradient-grey d-arrow padding-3 font-6 b-d-grey">&#x25BC;</span>
+              </div>
+              <div class="col-xs-6 padding-left-0">
+                <label for="menores" class="d-block">Menores</label>
+                <select id="menores" class="width-70-p padding-5-7 b-d-grey" ng-model="data.menores" ng-init="data.menores = 0">
+                  <option ng-value="$index" ng-repeat="count in menores track by $index">{{$index}}</option>
+                </select>
+                <span class="gradient-grey d-arrow padding-3 font-6 b-d-grey">&#x25BC;</span>
+              </div>
+          </div>
+        </div>
+      </fieldset>
+      <div class="f-right">
+        <span class="sp-best-price-es price absolute" style="bottom:85px; right:62px;"></span>
+        <input type="submit" value="Buscar" class="gradient-blue font-17 color-white padding-10-30 rounded-5 button-shadow"/>
+      </div>
+    </form>
+  </div>
+</div>

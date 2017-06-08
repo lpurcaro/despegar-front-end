@@ -1,0 +1,20 @@
+{
+  "content" : [
+    {
+      "title" : "Tipos de Alojamiento",
+      "content" : [
+        "Hotel Boutique",
+        "Posada",
+        "Hostel"
+      ]
+    },
+    {
+      "title" : "Puntos de Interés",
+      "content" : [
+        "Malecón",
+        "Costanera",
+        "Casa de Gobierno"
+      ]
+    }
+  ]
+}

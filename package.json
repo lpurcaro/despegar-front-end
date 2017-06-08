@@ -1,0 +1,27 @@
+{
+  "name": "despegar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "angular-bootstrap-datetimepicker": "^1.1.4",
+    "angular-datepicker": "^1.0.5",
+    "angularjs-datepicker": "^2.1.19",
+    "bower": "^1.8.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "lodash": "^4.17.4",
+    "shelljs": "^0.7.7",
+    "autoprefixer": "^6.5.4"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-postcss": "^7.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

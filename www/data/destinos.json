@@ -1,0 +1,52 @@
+{
+  "destinos" : [
+    {
+      "title" : "Hoteles en México",
+      "hoteles" : [
+        "Hoteles en México",
+        "Hostel en Rio de Janeiro",
+        "Hoteles en Puerto Vallarta",
+        "Hoteles en Chihuahua",
+        "Hoteles en Chihuahua",
+        "Hoteles en Ciudad de Mexico",
+        "Cabaña en Rio de Janeiro",
+        "Hoteles en Acapulco",
+        "Hoteles en Cuernavaca",
+        "Hoteles en Cuernavaca"
+      ]
+    },
+    {
+      "title" : "Hoteles en los mejores destinos",
+      "hoteles" : [
+        "Hoteles en Paris",
+        "Hoteles en Nueva York",
+        "Hoteles en Washington",
+        "Hoteles en Bangkok",
+        "Hoteles en Shangai",
+        "Hoteles en Londres",
+        "Hoteles en Praga",
+        "Hoteles en Dubai",
+        "Hoteles en Barcelona",
+        "Hoteles en Berlin",
+        "Hoteles en Roma",
+        "Hoteles en Venezia",
+        "Hoteles en Orlando",
+        "Hoteles en Estambul"
+      ]
+    },
+    {
+      "title" : "Destinos a descubrir",
+      "hoteles" : [
+        "Hoteles en Curaçao, Holanda",
+        "Hoteles en Cavalcante, Brasil",
+        "Hoteles en Covington, USA",
+        "Hoteles en Covington, USA",
+        "Hoteles en Aeropuerto Interna",
+        "Hoteles en Courcheval, Francia",
+        "Hoteles en Caviahue, Argentina",
+        "Hoteles en Covington, USA",
+        "Hoteles en Covington, USA"
+      ]
+    }
+  ]
+}

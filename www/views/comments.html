@@ -1,0 +1,20 @@
+<div ng-controller="commentsCtrl" class="margin-top-10">
+  <div ng-repeat="comment in comments">
+    <div class="padding-10 rounded-5 bubble">
+      <p class="margin-0 color-d-grey">"{{comment.text}}"</p>
+    </div>
+    <div class="row margin-top-20 margin-bottom-10">
+      <div class="col-sm-3 padding-right-5">
+        <div class="f-right">
+          <span class="sp-user user margin-auto"></span>
+          <span class="sp-mexico-flag flag margin-auto"></span>
+        </div>
+      </div>
+      <div class="col-sm-5 user-data color-d-grey padding-left-5">
+        <p class="color-blue font-17">{{comment.user.name}}</p>
+        <p class="font-12">{{comment.type}}</p>
+        <p class="font-15">{{comment.date}}</p>
+      </div>
+    </div>
+  </div>
+</div>

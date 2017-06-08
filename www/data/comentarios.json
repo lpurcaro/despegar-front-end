@@ -1,0 +1,22 @@
+{
+  "comments": [
+    {
+      "user" : {
+        "name" : "Miguel Adrián Vilar",
+        "country" : "Mexico"
+      },
+      "text" : "Es muy bueno, muy simple, yo soy de viajar mucho y casi siempre compro en despegar ya que ofrece muy buenas ofertas y muchas posibilidades de pago que en otros sitios con te brindad desde ya muy agradecido a despegar.com",
+      "date" : "9 Nov 2011",
+      "type" : "Viajó en familia"
+    },
+    {
+      "user" : {
+        "name" : "Marisa Claudia",
+        "country" : "Mexico"
+      },
+      "text" : "No viajo mucho, pero cuando lo hago, es a través de despegar.com, súper cómodo, lo hago desde mi casa, los precios y las facilidades de pago son muy buenos!",
+      "date" : "6 Jun 2012",
+      "type" : "Viajó con pareja y niños pequeños"
+    }
+  ]
+}

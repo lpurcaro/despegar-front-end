@@ -1,0 +1,45 @@
+<div class="bg-grey rounded-5" ng-controller="formCtrl">
+  <h2 class="color-blue font-20 padding-20">Listado de hoteles en {{destino.ciudad}}, {{destino.pais}}</h2>
+</div>
+<ul>
+  <li ng-repeat="hotel in hotels">
+    <div class="b-grey rounded-5 margin-bottom-10 padding-20-not-bottom">
+      <div class="row">
+        <div class="col-xs-4 col-md-3 col-lg-4 col-md-push-3">
+          <h3 class="margin-0 color-blue-light font-17">{{hotel.name}}</h3>
+          <span class="sp-star stars" ng-repeat="star in getStars(hotel.stars) track by $index"></span>
+          <span class="d-block color-d-grey">{{hotel.adress}}</span>
+          <a href="">Ver mapa</a>
+        </div>
+        <div class="col-md-3 col-md-pull-3 col-lg-pull-4 hidden-xs hidden-sm img-container">
+          <img ng-src="images/{{getImage(hotel.name)}}.jpg" alt="{{hotel.name}}" class="full-width full-height"/>
+        </div>
+        <div class="col-xs-4 col-md-3 col-lg-2 padding-0">
+          <span class="sp-comment comment"></span>
+          <h3 class="margin-0 font-15 color-blue padding-left-5 d-inline">Confortable</h3>
+          <div class="padding-left-25">
+            <span class="d-block color-blue">{{hotel.rating}} puntos</span>
+            <a href="">{{hotel.comments}} comentarios</a>
+          </div>
+        </div>
+        <div class="col-xs-4 col-md-3 t-center h-detail padding-20 padding-bottom-10 gradient-yellow">
+          <span>Desde <span class="font-20 d-block">{{hotel.price | currency:"U$S": 0}}</span></span>
+          <button class="gradient-red rounded-5 padding-5 color-white d-block t-center full-width margin-top-10 button-shadow" ng-click="isAvailable($index)">{{hotel.show}}</button>
+        </div>
+      </div>
+      <div ng-if="hotel.show == 'Ocultar'" class="b-top">
+        <div class="row margin-top-10">
+          <div class="col-sm-6 t-center">
+            <h4 class="color-blue font-20 padding-10 margin-0 rounded-5 bg-grey">Disponible desde:</h4>
+            <p class="padding-15">{{hotel.availability.from | date:'dd-MM-yyyy'}}</p>
+            <h4 class="color-blue font-20 padding-10 margin-0 rounded-5 bg-grey">Disponible hasta:</h4>
+            <p class="padding-15">{{hotel.availability.to | date:'dd-MM-yyyy'}}</p>
+          </div>
+          <div class="col-sm-6">
+            <datetimepicker class="f-right full-width" data-ng-model="hotel.availability.from" data-datetimepicker-config="configuration" data-before-render="startDate(hotel, $dates)"></datetimepicker>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
