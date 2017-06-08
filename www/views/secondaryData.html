@@ -1,5 +1,5 @@
 <div ng-controller="secondaryDataCtrl">
-  <div ng-repeat="data in info" class="">
+  <div ng-repeat="data in info" class="" ng-cloak>
     <h2 class="font-20 color-blue margin-0 padding-5-15">{{data.title}}</h2>
     <ul>
       <li ng-repeat="el in data.content track by $index" ng-class="{'b-bottom': $index != data.content.length - 1}">

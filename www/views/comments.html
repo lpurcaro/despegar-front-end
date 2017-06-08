@@ -1,5 +1,5 @@
 <div ng-controller="commentsCtrl" class="margin-top-10">
-  <div ng-repeat="comment in comments">
+  <div ng-repeat="comment in comments" ng-cloak>
     <div class="padding-10 rounded-5 bubble">
       <p class="margin-0 color-d-grey">"{{comment.text}}"</p>
     </div>

@@ -1,7 +1,7 @@
-<div class="bg-grey rounded-5" ng-controller="formCtrl">
+<div class="bg-grey rounded-5" ng-controller="formCtrl" ng-cloak>
   <h2 class="color-blue font-20 padding-20">Listado de hoteles en {{destino.ciudad}}, {{destino.pais}}</h2>
 </div>
-<ul>
+<ul ng-cloak>
   <li ng-repeat="hotel in hotels">
     <div class="b-grey rounded-5 margin-bottom-10 padding-20-not-bottom">
       <div class="row">

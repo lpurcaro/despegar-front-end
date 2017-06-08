@@ -80,6 +80,9 @@ input, select, option{
 .color-blue{
   color: #013D93;
 }
+.color-green{
+  color: #7DC24B;
+}
 .color-black{
   color: #000000;
 }
@@ -289,6 +292,9 @@ input::-webkit-inner-spin-button {
 }
 .absolute{
   position: absolute
+}
+.font-large{
+  font-size: large;
 }
 .font-6{
   font-size: 6px;

@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="../node_modules/angular-bootstrap-datetimepicker/src/css/datetimepicker.css"/>
+  <link rel="stylesheet" href="lib/angular-bootstrap-datetimepicker/src/css/datetimepicker.css"/>
   <link rel="stylesheet" href="./dist/sprite.css">
   <link rel="stylesheet" href="./dist/styles.css">
   <link rel="icon" href="./images/despegar.ico" type="image/x-icon">
@@ -15,13 +15,13 @@
 <body ng-app="despegar">
     <div class="container rounded-10 bg-white margin-bottom-10" ng-controller="mainCtrl">
       <nav id="bread-crumb" class="bread-crumb margin-top-10 color-d-grey">
-        <ul>
+        <ul ng-cloak>
           <li ng-repeat="link in breadcrumb track by $index">
             <a href="" ng-class="{'color-d-grey': $index == breadcrumb.length - 1}">{{link}}</a><span ng-if="$index != breadcrumb.length - 1" class="glyphicon glyphicon-menu-right"></span>
           </li>
         </ul>
       </nav>
-      <div class="bg-grey rounded-5 padding-5">
+      <div class="bg-grey rounded-5 padding-5" ng-cloak>
         <div class="row">
         <header class="col-xs-8">
           <div class="padding-10">
@@ -47,7 +47,7 @@
       <section class="row margin-top-20">
         <div ng-include="template.form"></div>
         <div class="hidden-xs col-sm-5 padding-left-5" style="height: 360px;">
-          <div class="sp-rio-de-janeiro rounded-10 full-height t-center">
+          <div class="sp-rio-de-janeiro rounded-10 full-height t-center" ng-cloak>
             <div class="bg-black opacity-50"></div>
             <p class="font-25 color-white">{{cantidad}} Hoteles en {{destino.ciudad}}, {{destino.pais}}<br/><span class="font-15">A partir de</span> <span class="font-20">U$S </span>577</p>
           </div>
@@ -57,7 +57,7 @@
         <div class="col-sm-8" ng-controller="primaryDataCtrl">
           <div ng-include="template.hotels"></div>
           <b class="weight-inherit color-d-grey">¿Administra un hotel en Río de Janeiro, Brasil? <a href="" class="underlined">¡Inclúyalo en este listado!</a></b>
-          <nav class="t-center margin-top-40">
+          <nav class="t-center margin-top-40" ng-cloak>
             <ul uib-pagination boundary-links="true" total-items="279" ng-model="currentPage" class="pagination-sm " previous-text="Anterior" next-text="Siguiente" first-text="&laquo;" last-text="&raquo;" max-size="5" boundary-link-numbers="true"></ul>
           </nav>
          </div>
@@ -66,7 +66,7 @@
           <section>
             <div ng-include="template.comments"></div>
             <div class="bg-grey rounded-5 padding-20 margin-bottom-30">
-              <div ng-repeat="star in getStars(6) | reverse | limitTo: 5" class="padding-5 color-blue-light">
+              <div ng-repeat="star in getStars(6) | reverse | limitTo: 5" class="padding-5 color-blue-light" ng-cloak>
                 <span class="font-17">Hoteles {{star}} estrella<span ng-if="star !== 1">s</span></span>
                 <div class="f-right hidden-xs hidden-sm">
                   <span ng-repeat="s in getStars(star)" class="sp-star stars-sm"></span>
@@ -81,15 +81,15 @@
         <div ng-include="template.destinos"></div>
       </section>
     </div>
-<script type="text/javascript" src="../node_modules/moment/moment.js"></script>
-<script type="text/javascript" src="../node_modules/angular/angular.js"></script>
-<script type="text/javascript" src="../node_modules/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>
-<script type="text/javascript" src="../node_modules/angular-bootstrap-datetimepicker/src/js/datetimepicker.templates.js"></script>
+<script type="text/javascript" src="lib/moment/moment.js"></script>
+<script type="text/javascript" src="lib/angular/angular.min.js"></script>
+<script type="text/javascript" src="lib/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>
+<script type="text/javascript" src="lib/angular-bootstrap-datetimepicker/src/js/datetimepicker.templates.js"></script>
 <script src="lib/jquery/jquery-3.2.1.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="lib/ui-bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script>
 <script src="lib/ngmap/build/scripts/ng-map.min.js"></script>
-<script src="http://maps.google.com/maps/api/js?key=AIzaSyDUKd74nHPJP6uVmFSq3BS4tUZrx89piIU"></script>
+<script src="https://maps.google.com/maps/api/js?key=AIzaSyDUKd74nHPJP6uVmFSq3BS4tUZrx89piIU"></script>
 <script src="dist/bundle.js"></script>
 </body>
 </html>

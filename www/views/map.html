@@ -1,7 +1,7 @@
 <div class="bg-grey padding-10 padding-bottom-0 map-height" ng-controller="mapCtrl">
   <h2 class="margin-0 padding-bottom-5 font-20 color-blue">Mapa</h2>
   <span class="sp-map map"></span>
-  <div class="t-right padding-5">
+  <div class="t-right padding-5" ng-cloak>
     <button class="map-button color-blue-light" ng-click="actionMap()"><span class="sp-lupa lupa margin-right-5"></span>{{action}}</button>
   </div>
   <div ng-if="map" class="relative full-width">
